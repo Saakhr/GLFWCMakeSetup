@@ -2,7 +2,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
-#include <gl2d/gl2d.h>
+/* #include <gl2d/gl2d.h> */
 #include <openglErrorReporting.h>
 
 #include "imgui.h"
@@ -34,7 +34,7 @@ int main(void)
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 #endif
 
-	GLFWwindow *window = glfwCreateWindow(640, 480, "Simple example", NULL, NULL);
+	GLFWwindow *window = glfwCreateWindow(640, 480, "Testing", NULL, NULL);
 	if (!window)
 	{
 		glfwTerminate();
@@ -88,15 +88,16 @@ int main(void)
 
 
 
-	gl2d::init();
-	gl2d::Renderer2D renderer;
-	renderer.create();
+	/* gl2d::init(); */
+	/* gl2d::Renderer2D renderer; */
+	/* renderer.create(); */
 
 	while (!glfwWindowShouldClose(window))
 	{
 		int width = 0, height = 0;
 		glfwGetFramebufferSize(window, &width, &height);
 		glViewport(0, 0, width, height);
+    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
 	#pragma region imgui
@@ -107,11 +108,11 @@ int main(void)
 	#pragma endregion
 
 
-		renderer.updateWindowMetrics(width, height);
-
-		renderer.renderRectangle({0,0, 100, 100}, Colors_Green);
-
-		renderer.flush();
+		/* renderer.updateWindowMetrics(width, height); */
+		/*  */
+		/* renderer.renderRectangle({0,0, 100, 100}, Colors_Green); */
+		/*  */
+		/* renderer.flush(); */
 
 
 		ImGui::Begin("Test");

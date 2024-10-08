@@ -3,5 +3,10 @@ bin/
 build/
 /.vs
 .idea/
+Debug/
+.cache/
 CMakeSettings.json
 Makefile
+imgui.ini
+compile_commands.json
+
